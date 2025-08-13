@@ -47,7 +47,7 @@ int main()
         printf("1. For Booking\n");
         printf("2. Exit\n");
         printf("Enter your choice: ");
-        scanf("%d", choice);
+        scanf("%d",&choice);
 
         if (choice == 1) 
         {
