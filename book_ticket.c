@@ -31,10 +31,13 @@ void bookTicket()
     }
     printf("Enter Number Of Seats: ");
     scanf("%d", &seats);
-    if (seats <= availableSeats[index]) {
+    if (seats <= availableSeats[index]) 
+    {
         availableSeats[index] -= seats;
         printf("Booking Successful! %d seats booked on Bus Number %d\n", seats, busNum);
-    } else {
+    } 
+    else 
+    {
         printf("Not enough seats available. Only %d left.\n", availableSeats[index]);
     }
 }
