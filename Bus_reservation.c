@@ -169,6 +169,8 @@ void userMenu()
         printf("Enter your choice: ");
         scanf("%s", input);
 
+         choice = atoi(input);
+
         switch (choice) 
         {
             case 1: bookTicket(); break;
