@@ -8,8 +8,7 @@ char usernames[MAX_USERS][30];
 char passwords[MAX_USERS][30];
 int  userCount = 0;
 
-int isNumeric(char str[]) 
-{
+int isNumeric(char str[]) {
     for (int i = 0; str[i] != '\0'; i++) 
     {
         if (!isdigit(str[i]))
@@ -17,6 +16,8 @@ int isNumeric(char str[])
     }
     return 1;
 }
+
+
 
 void signUp()
 {
@@ -76,16 +77,14 @@ int main()
         printf("2. Sign In\n");
         printf("3. Exit\n");
         printf("Enter your choice: ");
-        scanf("%s", input);
+        scanf("%s",input);
 
-        if (!isNumeric(input)) 
-        {
-            printf("Invalid,Please enter a number.\n");
+        if (!isNumeric(input)) {
+            printf("Invalid input. Please enter a number.\n");
             continue;
-        } 
+        }
 
         choice = atoi(input);
-
 
         if (choice == 1) 
         {
@@ -95,17 +94,18 @@ int main()
         {
             if (signIn()) 
             {
-               //  After login go to userMenu();
+               //After login it will go to userMenu();
             }
         } 
         else if (choice == 3) 
         {
-            printf("Thank you Welcome Again!!..\n");
+            printf("Thank you welcome again!!..\n");
         } 
         else 
         {
             printf("Invalid choice. Try again.\n");
         }
+
     } while (choice != 3);
 
     return 0;
